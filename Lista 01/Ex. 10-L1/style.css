@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c36;
+    color: white;
+    margin: 0;
+}
+
+.container {
+    background: #3a3f4b;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Garante alinhamento */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+label {
+    align-self: flex-start; /* Garante que os labels fiquem alinhados à esquerda */
+}
+
+input {
+    width: calc(100% - 16px); /* Evita inputs muito largos */
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    text-align: center;
+}
+
+input.error {
+    border: 2px solid red;
+    background-color: #ffcccc;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    height: 18px;
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
+button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #218838;
+}
+
+#resultado {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}

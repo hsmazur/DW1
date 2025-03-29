@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Hipotenusa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Calculadora de Hipotenusa</h2>
+        <form id="form">
+            <label for="catetoA">Cateto A:</label>
+            <input type="number" id="catetoA" placeholder="Digite o valor de A">
+            <span class="error-message" id="errorA"></span>
+
+            <label for="catetoB">Cateto B:</label>
+            <input type="number" id="catetoB" placeholder="Digite o valor de B">
+            <span class="error-message" id="errorB"></span>
+
+            <button type="submit">Calcular</button>
+        </form>
+
+        <p id="resultado"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
