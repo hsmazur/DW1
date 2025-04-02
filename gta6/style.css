@@ -1,37 +1,57 @@
-/* Estilos básicos para a cidade e o personagem */
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #222;
+    color: white;
 }
 
-#cidade {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    background-color: #87CEEB; /* Cor de céu */
+.container {
+    margin-top: 100px;
 }
 
-#personagem {
-        width: 100px;
-        height: 100px;
-        background-image: url('personagem.jpeg'); /* Adicionar imagem */
-        background-size: cover;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transition: top 0.1s, left 0.1s;
-    }
-    
-
-
-/* Estilos para os quadradinhos */
-.quadradinho {
-    width: 10px;
-    height: 10px;
-    background-color: black;
-    position: absolute;
-    transition: left 0.1s;
+.game-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
+button {
+    padding: 15px 30px;
+    font-size: 1.5em;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+
+button:hover {
+    opacity: 0.8;
+}
+
+.creditos {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.creditos:not(.hidden) {
+    opacity: 1;
+    transform: scale(1);
+}
+.hidden {
+    display: none;
+}

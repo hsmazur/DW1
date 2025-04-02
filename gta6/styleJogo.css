@@ -1,0 +1,99 @@
+/* Estilos básicos para a cidade e o personagem */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+#cidade {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-image: url('Imagens/cenario.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#personagem {
+    width: 100px;
+    height: 100px;
+    background-image: url('Imagens/personagem.jpeg'); /* Adicionar imagem */
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: top 0.1s, left 0.1s;
+    z-index: 2; /* Garante que o personagem fique sobre os outros elementos */
+}
+
+/* Estilos para os quadradinhos */
+.quadradinho {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    transition: left 0.1s;
+    z-index: 1;
+}
+
+/* Estilos para os carros */
+.carro {
+    width: 120px;
+    height: 60px;
+    background-image: url('Imagens/carro.jpeg'); /* Adicionar imagem do carro */
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+}
+
+/* Efeito de explosão ao ser atingido */
+.explosao {
+    background-image: url('Imagens/explosão.jpg'); /* Adicionar imagem de explosão */
+    background-size: cover;
+    animation: desaparecer 0.5s forwards;
+}
+
+@keyframes desaparecer {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(2); }
+}
+
+/* Estilização do contêiner da imagem no canto inferior esquerdo */
+#containerImagem {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Mantém a imagem abaixo do personagem */
+}
+
+#containerImagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilização do relógio */
+#relogio {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    padding: 10px 15px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 1;
+}
+/* Posicionamento inicial dos carros no cenário */
+.carro:nth-child(1) { top: 100px; left: 200px; }
+.carro:nth-child(2) { top: 300px; left: 400px; }
+.carro:nth-child(3) { top: 500px; left: 600px; }
